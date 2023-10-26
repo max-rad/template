@@ -20,7 +20,7 @@ mixin header(headerMods, currentUrl)
       }
     ]
 
-  header.header(class=headerMods)
+  header.header(class=headerMods data-header)
     .container
       .header__wrapper
         if(currentUrl === "index.html")
@@ -29,8 +29,8 @@ mixin header(headerMods, currentUrl)
         else
           a.header__logo(href="index.html", aria-label="Переход на главную")
             +icon("logo", 247, 35)
-        nav.main-nav(data-menu)
-          button(type="button" aria-label="Переключатель отображения меню", aria-pressed="false" data-menu-toggle).btn-reset.main-nav__toggle
+        nav.main-nav
+          button(type="button" aria-label="Переключатель отображения меню", aria-pressed="false" data-toggle-menu).btn-reset.main-nav__toggle
           ul.main-nav__list
             each item in headerLinks
               li.main-nav__item

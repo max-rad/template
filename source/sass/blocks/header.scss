@@ -7,9 +7,30 @@
 
   width: 100%;
 
-  overflow: hidden;
+  //overflow: hidden;
 
   background-color: rgba($color-black-russian, 0.9);
+
+  &.is-active {
+    .main-nav__toggle {
+      &::before {
+        top: 15px;
+        transform: rotate(-45deg) translate(0, -50%);
+      }
+
+      &::after {
+        top: 13px;
+        transform: rotate(45deg) translate(0, 50%);
+      }
+    }
+
+    .main-nav__list {
+      transform: translateX(0);
+
+      //visibility: visible;
+      //opacity: 1;
+    }
+  }
 
   &__wrapper {
     display: flex;

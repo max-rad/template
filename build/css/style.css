@@ -647,8 +647,27 @@ button,
   top: 0;
   left: 0;
   width: 100%;
-  overflow: hidden;
   background-color: rgba(16, 16, 29, 0.9);
+}
+
+.header.is-active .main-nav__toggle::before {
+  top: 15px;
+  -webkit-transform: rotate(-45deg) translate(0, -50%);
+  -ms-transform: rotate(-45deg) translate(0, -50%);
+  transform: rotate(-45deg) translate(0, -50%);
+}
+
+.header.is-active .main-nav__toggle::after {
+  top: 13px;
+  -webkit-transform: rotate(45deg) translate(0, 50%);
+  -ms-transform: rotate(45deg) translate(0, 50%);
+  transform: rotate(45deg) translate(0, 50%);
+}
+
+.header.is-active .main-nav__list {
+  -webkit-transform: translateX(0);
+  -ms-transform: translateX(0);
+  transform: translateX(0);
 }
 
 .header__wrapper {
@@ -679,26 +698,6 @@ button,
   display: block;
   width: 247px;
   height: 35px;
-}
-
-.main-nav.is-active .main-nav__toggle::before {
-  top: 15px;
-  -webkit-transform: rotate(-45deg) translate(0, -50%);
-  -ms-transform: rotate(-45deg) translate(0, -50%);
-  transform: rotate(-45deg) translate(0, -50%);
-}
-
-.main-nav.is-active .main-nav__toggle::after {
-  top: 13px;
-  -webkit-transform: rotate(45deg) translate(0, 50%);
-  -ms-transform: rotate(45deg) translate(0, 50%);
-  transform: rotate(45deg) translate(0, 50%);
-}
-
-.main-nav.is-active .main-nav__list {
-  -webkit-transform: translateX(0);
-  -ms-transform: translateX(0);
-  transform: translateX(0);
 }
 
 .main-nav__toggle {
@@ -994,16 +993,17 @@ button,
     -ms-flex-pack: start;
     justify-content: flex-start;
     top: 100px;
+    right: 0;
+    bottom: 0;
     left: 0;
     width: 100%;
-    height: 100vh;
-    padding: 100px 20px 20px;
+    padding: 200px 20px 20px;
     background-color: rgba(16, 16, 29, 0.9);
-    -webkit-transition: -webkit-transform 0.3s ease;
-    transition: -webkit-transform 0.3s ease;
-    -o-transition: transform 0.3s ease;
-    transition: transform 0.3s ease;
-    transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+    -webkit-transition: visibility 0.3s ease, opacity 0.3s ease, -webkit-transform 0.3s ease;
+    transition: visibility 0.3s ease, opacity 0.3s ease, -webkit-transform 0.3s ease;
+    -o-transition: transform 0.3s ease, visibility 0.3s ease, opacity 0.3s ease;
+    transition: transform 0.3s ease, visibility 0.3s ease, opacity 0.3s ease;
+    transition: transform 0.3s ease, visibility 0.3s ease, opacity 0.3s ease, -webkit-transform 0.3s ease;
     -webkit-transform: translateX(100%);
     -ms-transform: translateX(100%);
     transform: translateX(100%);

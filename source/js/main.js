@@ -1,7 +1,8 @@
-import {initHeaderMenu} from './modules/init-header-menu.js';
+import {initHeader} from './modules/header/init-header';
+
 
 window.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('load', () => {
-    initHeaderMenu();
+    initHeader();
   });
 });
