@@ -11,7 +11,7 @@
 
   background-color: rgba($color-black-russian, 0.9);
 
-  &.is-active {
+  &.is-open {
     .main-nav__toggle {
       &::before {
         top: 15px;

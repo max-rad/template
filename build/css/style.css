@@ -650,21 +650,21 @@ button,
   background-color: rgba(16, 16, 29, 0.9);
 }
 
-.header.is-active .main-nav__toggle::before {
+.header.is-open .main-nav__toggle::before {
   top: 15px;
   -webkit-transform: rotate(-45deg) translate(0, -50%);
   -ms-transform: rotate(-45deg) translate(0, -50%);
   transform: rotate(-45deg) translate(0, -50%);
 }
 
-.header.is-active .main-nav__toggle::after {
+.header.is-open .main-nav__toggle::after {
   top: 13px;
   -webkit-transform: rotate(45deg) translate(0, 50%);
   -ms-transform: rotate(45deg) translate(0, 50%);
   transform: rotate(45deg) translate(0, 50%);
 }
 
-.header.is-active .main-nav__list {
+.header.is-open .main-nav__list {
   -webkit-transform: translateX(0);
   -ms-transform: translateX(0);
   transform: translateX(0);
@@ -925,6 +925,129 @@ button,
   margin-right: 0;
 }
 
+.custom-select {
+  position: relative;
+  width: 100%;
+  max-width: 300px;
+}
+
+.custom-select.is-open .custom-select__icon {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.custom-select.is-open .custom-select__button {
+  border-radius: 5px 5px 0 0;
+}
+
+.custom-select.is-open .custom-select__list {
+  visibility: visible;
+  opacity: 1;
+}
+
+.custom-select__label {
+  display: block;
+  margin: 0 0 10px;
+  font-weight: 0;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.custom-select__button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: lightgray;
+  cursor: pointer;
+  outline: none;
+}
+
+.custom-select__text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #000000;
+}
+
+.custom-select__icon {
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: 20px;
+  height: 10px;
+  margin-left: 10px;
+  background-color: #000;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  -o-transition: transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+  -webkit-clip-path: polygon(100% 0, 100% 20%, 50% 100%, 0 20%, 0 0, 50% 80%);
+  clip-path: polygon(100% 0, 100% 20%, 50% 100%, 0 20%, 0 0, 50% 80%);
+}
+
+.custom-select__list {
+  z-index: 1;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  max-height: 102px;
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;
+  list-style: none;
+  background-color: lightgrey;
+  -webkit-transition: visibility 0.3s ease, opacity 0.3s ease;
+  -o-transition: visibility 0.3s ease, opacity 0.3s ease;
+  transition: visibility 0.3s ease, opacity 0.3s ease;
+  -webkit-transform: translateY(100%);
+  -ms-transform: translateY(100%);
+  transform: translateY(100%);
+  visibility: hidden;
+  opacity: 0;
+}
+
+.custom-select__item {
+  padding: 5px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #000000;
+  -webkit-transition: background-color 0.3s ease;
+  -o-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+  outline: none;
+}
+
+.custom-select__item.focus-visible:focus {
+  background-color: chartreuse;
+}
+
+.custom-select select {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  border: none;
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+}
+
 @media (max-width: 1439px) {
   .intro__wrapper {
     padding: 203px 0;
@@ -1069,5 +1192,9 @@ button,
 
   .btn:hover:not(.focus-visible) {
     opacity: 0.8;
+  }
+
+  .custom-select__item:hover:not(.focus-visible) {
+    background-color: chartreuse;
   }
 }

@@ -24,7 +24,7 @@ export class Header {
 
   _openMenu() {
     this._isMenuOpen = true;
-    this._header.classList.add('is-active');
+    this._header.classList.add('is-open');
     this._scrollLock.disableScrolling();
     document.addEventListener('keydown', this._onDocumentKeydown);
     document.addEventListener('click', this._onDocumentClick);
@@ -33,7 +33,7 @@ export class Header {
 
   _closeMenu() {
     this._isMenuOpen = false;
-    this._header.classList.remove('is-active');
+    this._header.classList.remove('is-open');
     this._scrollLock.enableScrolling();
     document.removeEventListener('keydown', this._onDocumentKeydown);
     document.removeEventListener('click', this._onDocumentClick);
