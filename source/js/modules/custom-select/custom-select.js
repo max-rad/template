@@ -38,6 +38,10 @@ export class CustomSelect {
         this._onSelectItemClick(item, index);
       });
 
+      item.addEventListener('keydown', (evt) => {
+        this._onSelectItemKeydown(item, index, evt);
+      });
+
       if (index === items.length - 1) {
         item.addEventListener('keydown', this._onLastSelectItemKeydown);
       }
@@ -124,8 +128,10 @@ export class CustomSelect {
     this._setSelectItemAction(item, index);
   }
 
-  _onSelectItemKeydown() {
-
+  _onSelectItemKeydown(item, index, evt) {
+    if (evt.key === 'Enter') {
+      this._setSelectItemAction(item, index);
+    }
   }
 
   _onLastSelectItemKeydown(evt) {
