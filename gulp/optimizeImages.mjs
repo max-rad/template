@@ -33,7 +33,7 @@ const optimizeSvg = () =>
               name: 'removeUselessStrokeAndFill',
               active: false,
             }
-            ],
+          ],
         })
       ])
     )

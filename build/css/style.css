@@ -825,6 +825,18 @@ button,
   opacity: 0.8;
 }
 
+[data-accordion=element].is-active > [data-accordion=content] {
+  max-height: 100%;
+}
+
+[data-accordion=content] {
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: max-height 0.3s ease;
+  -o-transition: max-height 0.3s ease;
+  transition: max-height 0.3s ease;
+}
+
 .intro {
   position: relative;
 }
@@ -923,6 +935,14 @@ button,
 
 .intro__button:last-child {
   margin-right: 0;
+}
+
+.accordion__button {
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .custom-select {
