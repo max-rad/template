@@ -13,30 +13,37 @@
     transition: opacity $trans-default;
 
     @include vp-767 {
-      display: block;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
-    &::before,
-    &::after {
-      content: "";
+    span {
+      display: block;
       position: absolute;
 
       left: 0;
 
       width: 100%;
-      height: 2px;
+      height: 3px;
 
       background-color: $color-default-white;
 
-      transition: transform $trans-default;
-    }
+      transition: transform $trans-default, opacity $trans-default, visibility $trans-default;
 
-    &::before {
-      top: 10px;
-    }
+      &:nth-child(1) {
+        top: 0;
+      }
 
-    &::after {
-      bottom: 10px;
+      &:nth-child(2) {
+        top: 50%;
+
+        transform: translateY(-50%);
+      }
+
+      &:nth-child(3) {
+        bottom: 0;
+      }
     }
 
     @include hover-focus {
@@ -70,9 +77,6 @@
 
       transition: transform $trans-default, visibility $trans-default, opacity $trans-default;
       transform: translateX(100%);
-
-      //visibility: hidden;
-      //opacity: 0;
     }
   }
 

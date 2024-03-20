@@ -13,22 +13,26 @@
 
   &.is-open {
     .main-nav__toggle {
-      &::before {
-        top: 15px;
-        transform: rotate(-45deg) translate(0, -50%);
-      }
+      span {
+        &:nth-child(1) {
+          top: 10px;
+          transform: rotate(-45deg) translate(0, -50%);
+        }
 
-      &::after {
-        top: 13px;
-        transform: rotate(45deg) translate(0, 50%);
+        &:nth-child(2) {
+          opacity: 0;
+          visibility: hidden;
+        }
+
+        &:nth-child(3) {
+          top: 8px;
+          transform: rotate(45deg) translate(0, 50%);
+        }
       }
     }
 
     .main-nav__list {
       transform: translateX(0);
-
-      //visibility: visible;
-      //opacity: 1;
     }
   }
 

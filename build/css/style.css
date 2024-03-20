@@ -1370,15 +1370,20 @@ button,
   background-color: rgba(16, 16, 29, 0.9);
 }
 
-.header.is-open .main-nav__toggle::before {
-  top: 15px;
+.header.is-open .main-nav__toggle span:nth-child(1) {
+  top: 10px;
   -webkit-transform: rotate(-45deg) translate(0, -50%);
   -ms-transform: rotate(-45deg) translate(0, -50%);
   transform: rotate(-45deg) translate(0, -50%);
 }
 
-.header.is-open .main-nav__toggle::after {
-  top: 13px;
+.header.is-open .main-nav__toggle span:nth-child(2) {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.header.is-open .main-nav__toggle span:nth-child(3) {
+  top: 8px;
   -webkit-transform: rotate(45deg) translate(0, 50%);
   -ms-transform: rotate(45deg) translate(0, 50%);
   transform: rotate(45deg) translate(0, 50%);
@@ -1436,27 +1441,33 @@ button,
   transition: opacity 0.3s ease;
 }
 
-.main-nav__toggle::before,
-.main-nav__toggle::after {
-  content: "";
+.main-nav__toggle span {
+  display: block;
   position: absolute;
   left: 0;
   width: 100%;
-  height: 2px;
+  height: 3px;
   background-color: #ffffff;
-  -webkit-transition: -webkit-transform 0.3s ease;
-  transition: -webkit-transform 0.3s ease;
-  -o-transition: transform 0.3s ease;
-  transition: transform 0.3s ease;
-  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+  -webkit-transition: opacity 0.3s ease, visibility 0.3s ease, -webkit-transform 0.3s ease;
+  transition: opacity 0.3s ease, visibility 0.3s ease, -webkit-transform 0.3s ease;
+  -o-transition: transform 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
+  transition: transform 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
+  transition: transform 0.3s ease, opacity 0.3s ease, visibility 0.3s ease, -webkit-transform 0.3s ease;
 }
 
-.main-nav__toggle::before {
-  top: 10px;
+.main-nav__toggle span:nth-child(1) {
+  top: 0;
 }
 
-.main-nav__toggle::after {
-  bottom: 10px;
+.main-nav__toggle span:nth-child(2) {
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.main-nav__toggle span:nth-child(3) {
+  bottom: 0;
 }
 
 .main-nav__toggle.focus-visible:focus {
@@ -2302,7 +2313,15 @@ button,
   }
 
   .main-nav__toggle {
-    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
   }
 
   .main-nav__list {
