@@ -1560,12 +1560,66 @@ button,
   max-height: 100%;
 }
 
+[data-accordion=parent].no-transition [data-accordion=content] {
+  -webkit-transition: none;
+  -o-transition: none;
+  transition: none;
+}
+
 [data-accordion=content] {
   max-height: 0;
+  -webkit-transition: max-height 0.3s;
+  -o-transition: max-height 0.3s;
+  transition: max-height 0.3s;
   overflow: hidden;
-  -webkit-transition: max-height 0.3s ease;
-  -o-transition: max-height 0.3s ease;
-  transition: max-height 0.3s ease;
+}
+
+[data-tabs=parent] {
+  overflow: hidden;
+}
+
+[data-tabs=parent].no-transition > [data-tabs=control],
+[data-tabs=parent].no-transition > [data-tabs=content],
+[data-tabs=parent].no-transition > [data-tabs=element] {
+  -webkit-transition: none;
+  -o-transition: none;
+  transition: none;
+}
+
+[data-tabs=parent].no-transition-global [data-tabs=control],
+[data-tabs=parent].no-transition-global [data-tabs=content],
+[data-tabs=parent].no-transition-global [data-tabs=element] {
+  -webkit-transition: none;
+  -o-transition: none;
+  transition: none;
+}
+
+[data-tabs=parent] [data-tabs=content] {
+  position: relative;
+}
+
+[data-tabs=element] {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease-in, visibility 0.3s ease-in;
+  -o-transition: opacity 0.3s ease-in, visibility 0.3s ease-in;
+  transition: opacity 0.3s ease-in, visibility 0.3s ease-in;
+}
+
+[data-tabs=element].for-load {
+  position: static;
+  visibility: visible;
+  opacity: 1;
+  -webkit-transition: none;
+  -o-transition: none;
+  transition: none;
+}
+
+[data-tabs=element].is-active {
+  z-index: 1;
+  visibility: visible;
+  opacity: 1;
 }
 
 .intro {
@@ -1806,16 +1860,6 @@ button,
 .modal iframe {
   max-width: 100%;
   border: none;
-}
-
-.modal--gallery .modal__content {
-  position: static;
-  background-color: rgba(255, 255, 255, 0);
-}
-
-.modal--gallery .modal__close-button svg {
-  width: 48px;
-  height: 48px;
 }
 
 .custom-checkbox {
@@ -2290,11 +2334,6 @@ button,
   .modal__content {
     width: 100%;
   }
-
-  .modal--gallery .modal__close-button {
-    top: 0;
-    right: 0;
-  }
 }
 
 @media (max-width: 767px) {
@@ -2410,11 +2449,6 @@ button,
   .modal__close-button {
     top: 5px;
     right: 5px;
-  }
-
-  .modal--gallery .modal__close-button {
-    top: 0;
-    right: 0;
   }
 
   .custom-checkbox__label {

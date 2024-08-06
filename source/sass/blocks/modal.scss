@@ -128,29 +128,4 @@
     max-width: 100%;
     border: none;
   }
-
-  &--gallery {
-    .modal__content {
-      position: static;
-
-      background-color: $color-transparent;
-    }
-
-    .modal__close-button {
-      @include vp-1023 {
-        top: 0;
-        right: 0;
-      }
-
-      @include vp-767 {
-        top: 0;
-        right: 0;
-      }
-
-      svg {
-        width: 48px;
-        height: 48px;
-      }
-    }
-  }
 }
