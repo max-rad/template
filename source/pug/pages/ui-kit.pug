@@ -1,0 +1,58 @@
+extends ../components/base/layout
+
+block variables
+  - const title = "UI-kit"
+  - const currentUrl = "ui-kit.html"
+  -
+    const breadcrumbsLinks = [
+      {
+        href: "ui-kit.html",
+        text: "UI-kit"
+      }
+    ]
+  -
+    const headerLinks = [
+      {
+        href: "#modals",
+        text: "Modals"
+      },
+      {
+        href: "#buttons",
+        text: "Buttons"
+      }
+    ]
+
+block main
+  header.header-ui
+    .container
+      .header-ui__wrapper
+        ul.list-reset.list-reset.header-ui__list
+          each item in headerLinks
+            li.header-ui__item
+              a.header-ui__link(href=item.href)!=item.text
+  main
+    .container
+      h1 UI-kit
+      section.section-ui(id="modals")
+        h2.section-ui__title Modals
+        +btn({type: "button", text: "Feedback"})(data-open-modal="feedback")
+        p Все модальные окна подключаются на страницах в блоке modals (/pug/pages/*.pug)
+        p На кнопку добавляется data атрибут data-open-modal="название модального окна"
+        p Пример вызова кнопки:
+        pre
+          code +btn({type: "button", text: "Кнопка"})(data-open-modal="feedback")
+        p Пример вызова модального окна:
+        pre
+          code
+            | +modal('modal--feedback')(data-modal="feedback")
+            |   +feedback()
+      section.section-ui(id="buttons")
+        h2.section-ui__title Buttons
+        +btn({type: "button", text: "Кнопка"})
+        p Пример вызова:
+        pre
+          code +btn({type: "button", text: "Кнопка"})
+
+block modals
+  +modal('modal--feedback')(data-modal="feedback")
+    +feedback()

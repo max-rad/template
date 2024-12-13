@@ -64,7 +64,7 @@ export class Header {
   }
 
   _onDocumentClick(evt) {
-    if (evt.target.hasAttribute('[data-close-menu]')) {
+    if (evt.target.hasAttribute('data-close-menu')) {
       this._closeMenu();
     }
   }

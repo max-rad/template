@@ -2,6 +2,8 @@ mixin intro()
   section.intro
     .intro__background
       +picture("content", "intro-background", "png", 1920, 850, "background")
+    //- вставлять блоки во внешний контейнер неверно (если это не фон, например)
+    //- все блоки содержат в себе container без доп класса tutorial__wrapper
     .container
       .intro__wrapper
         h1.intro__title
