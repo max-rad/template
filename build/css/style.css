@@ -3740,7 +3740,7 @@ button,
   transition: background-color 0.3s ease;
 }
 
-.custom-checkbox__icon img {
+.custom-checkbox__icon svg {
   -ms-flex-negative: 0;
   flex-shrink: 0;
   width: 14px;
@@ -3760,7 +3760,7 @@ button,
   clip: rect(0 0 0 0);
 }
 
-.custom-checkbox input:checked + .custom-checkbox__icon img {
+.custom-checkbox input:checked + .custom-checkbox__icon svg {
   visibility: visible;
   opacity: 1;
 }

@@ -13,42 +13,4 @@ block variables
 block main
   main
     +intro()
-    form(action="#" method="get")
-      +custom-select({
-        name: "select-example",
-        label: "Select-example",
-        placeholder: "Choose an option",
-        optionsList: [
-          {
-            value: "option-1",
-            text: "Option-1"
-          },
-          {
-            value: "option-2",
-            text: "Option-2"
-          },
-          {
-            value: "option-3",
-            text: "Option-3"
-          },
-          {
-            value: "option-4",
-            text: "Option-4"
-          },
-          {
-            value: "option-5",
-            text: "Option-5"
-          },
-          {
-            value: "option-6",
-            text: "Option-6"
-          }
-        ]
-      })
-      button(type="submit") Отправить
-    <form  method="POST" action="https://script.google.com/macros/s/AKfycbxdncMgi-vYPaMiakhIaXAktESDfqXOcs2EPhzZH-EvdZv66GNo-1LO3uVSHwa2k3lH/exec">
-      <input name="Email" type="email" placeholder="Email" required>
-      <input name="Name" type="text" placeholder="Name" required>
-      <button type="submit">Send</button>
-    </form>
 block modals

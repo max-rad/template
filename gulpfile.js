@@ -9,7 +9,7 @@ import pug from './gulp/compilePug.mjs';
 
 const server = browserSync.create();
 
-const streamStyles = () => styles().pipe(server.stream());
+const streamStyles = () => compileStyles().pipe(server.stream());
 
 const clean = () => deleteAsync('build');
 

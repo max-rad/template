@@ -23,7 +23,7 @@
 
     transition: background-color $trans-default;
 
-    img {
+    svg {
       flex-shrink: 0;
 
       width: 14px;
@@ -47,8 +47,7 @@
   }
 
   input:checked + .custom-checkbox__icon {
-
-    img {
+    svg {
       visibility: visible;
       opacity: 1;
     }
