@@ -57,7 +57,7 @@ const createWebp = () => {
   const root = '';
   return gulp
       .src(`source/img/${root}**/*.{png,jpg}`)
-      .pipe(avif())
+      .pipe(webp({quality: 90}))
       .pipe(gulp.dest(`source/img/${root}`));
 };
 
@@ -65,7 +65,7 @@ const createAvif = () => {
   const root = '';
   return gulp
       .src(`source/img/${root}**/*.{png,jpg}`)
-      .pipe(webp({quality: 90}))
+      .pipe(avif())
       .pipe(gulp.dest(`source/img/${root}`));
 };
 
