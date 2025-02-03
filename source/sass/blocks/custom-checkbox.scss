@@ -1,3 +1,6 @@
+@use "../mixins";
+@use "../variables";
+
 .custom-checkbox {
   position: relative;
 
@@ -19,9 +22,9 @@
     margin-right: 8px;
 
     border-radius: 2px;
-    background-color: $color-default-white;
+    background-color: variables.$color-default-white;
 
-    transition: background-color $trans-default;
+    transition: background-color variables.$trans-default;
 
     svg {
       flex-shrink: 0;
@@ -29,7 +32,7 @@
       width: 14px;
       height: 14px;
 
-      transition: visibility $trans-default, opacity $trans-default;
+      transition: visibility variables.$trans-default, opacity variables.$trans-default;
 
       visibility: hidden;
       opacity: 0;
@@ -65,7 +68,7 @@
 
     user-select: none;
 
-    @include vp-767 {
+    @include mixins.vp-767 {
       font-size: 22px;
       line-height: 33px;
     }
@@ -84,9 +87,9 @@
     font-size: 16px;
     line-height: 19px;
 
-    color: rgba($color-default-black, 0.5);
+    color: rgba(variables.$color-default-black, 0.5);
 
-    transition: opacity $trans-default, visibility $trans-default;
+    transition: opacity variables.$trans-default, visibility variables.$trans-default;
 
     opacity: 0;
     visibility: hidden;

@@ -520,7 +520,6 @@ template {
   position: absolute;
   text-align: center;
   -webkit-transition: 300ms opacity;
-  -o-transition: 300ms opacity;
   transition: 300ms opacity;
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
@@ -669,7 +668,6 @@ button.swiper-pagination-bullet {
   display: inline-block;
   -webkit-transition: 200ms top, 200ms -webkit-transform;
   transition: 200ms top, 200ms -webkit-transform;
-  -o-transition: 200ms transform, 200ms top;
   transition: 200ms transform, 200ms top;
   transition: 200ms transform, 200ms top, 200ms -webkit-transform;
 }
@@ -692,7 +690,6 @@ button.swiper-pagination-bullet {
 .swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
   -webkit-transition: 200ms left, 200ms -webkit-transform;
   transition: 200ms left, 200ms -webkit-transform;
-  -o-transition: 200ms transform, 200ms left;
   transition: 200ms transform, 200ms left;
   transition: 200ms transform, 200ms left, 200ms -webkit-transform;
 }
@@ -700,7 +697,6 @@ button.swiper-pagination-bullet {
 .swiper-horizontal.swiper-rtl > .swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
   -webkit-transition: 200ms right, 200ms -webkit-transform;
   transition: 200ms right, 200ms -webkit-transform;
-  -o-transition: 200ms transform, 200ms right;
   transition: 200ms transform, 200ms right;
   transition: 200ms transform, 200ms right, 200ms -webkit-transform;
 }
@@ -828,11 +824,9 @@ button.swiper-pagination-bullet {
   display: flex;
   -webkit-transition-property: -webkit-transform;
   transition-property: -webkit-transform;
-  -o-transition-property: transform;
   transition-property: transform;
   transition-property: transform, -webkit-transform;
   -webkit-transition-timing-function: var(--swiper-wrapper-transition-timing-function, initial);
-  -o-transition-timing-function: var(--swiper-wrapper-transition-timing-function, initial);
   transition-timing-function: var(--swiper-wrapper-transition-timing-function, initial);
   -webkit-box-sizing: content-box;
   box-sizing: content-box;
@@ -863,7 +857,6 @@ button.swiper-pagination-bullet {
   position: relative;
   -webkit-transition-property: -webkit-transform;
   transition-property: -webkit-transform;
-  -o-transition-property: transform;
   transition-property: transform;
   transition-property: transform, -webkit-transform;
   display: block;
@@ -886,7 +879,6 @@ button.swiper-pagination-bullet {
   align-items: flex-start;
   -webkit-transition-property: height, -webkit-transform;
   transition-property: height, -webkit-transform;
-  -o-transition-property: transform, height;
   transition-property: transform, height;
   transition-property: transform, height, -webkit-transform;
 }
@@ -1023,25 +1015,21 @@ button.swiper-pagination-bullet {
 
 .swiper-3d .swiper-slide-shadow-left {
   background-image: -webkit-gradient(linear, right top, left top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0)));
-  background-image: -o-linear-gradient(right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
   background-image: linear-gradient(to left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
 }
 
 .swiper-3d .swiper-slide-shadow-right {
   background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0)));
-  background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
 }
 
 .swiper-3d .swiper-slide-shadow-top {
   background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0)));
-  background-image: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
   background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
 }
 
 .swiper-3d .swiper-slide-shadow-bottom {
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0)));
-  background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
 }
 
@@ -1716,7 +1704,6 @@ button.swiper-pagination-bullet {
   pointer-events: all;
   cursor: pointer;
   -webkit-transition: var(--f-button-transition);
-  -o-transition: var(--f-button-transition);
   transition: var(--f-button-transition);
 }
 
@@ -1743,7 +1730,6 @@ button.swiper-pagination-bullet {
   stroke-linecap: round;
   stroke-linejoin: round;
   -webkit-transition: opacity 0.15s ease;
-  -o-transition: opacity 0.15s ease;
   transition: opacity 0.15s ease;
   -webkit-transform: var(--f-button-transform);
   -ms-transform: var(--f-button-transform);
@@ -1903,7 +1889,7 @@ html.with-fancybox body.hide-scrollbar {
   box-sizing: inherit;
 }
 
-.fancybox__container::-webkit-backdrop {
+.fancybox__container::-ms-backdrop {
   background-color: rgba(0, 0, 0, 0);
 }
 
@@ -2084,7 +2070,6 @@ html.with-fancybox body.hide-scrollbar {
   background-size: contain;
   background-position: center center;
   -webkit-transition: none;
-  -o-transition: none;
   transition: none;
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
@@ -2193,7 +2178,6 @@ html.with-fancybox body.hide-scrollbar {
   padding: 24px;
   opacity: var(--fancybox-opacity, 1);
   -webkit-transition: all 0.25s ease;
-  -o-transition: all 0.25s ease;
   transition: all 0.25s ease;
 }
 
@@ -2469,7 +2453,6 @@ html.with-fancybox body.hide-scrollbar {
   height: 100%;
   border-radius: 2px;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#ebeff2), to(#e2e8f0));
-  background-image: -o-linear-gradient(#ebeff2, #e2e8f0);
   background-image: linear-gradient(#ebeff2, #e2e8f0);
   z-index: -1;
 }
@@ -2549,7 +2532,6 @@ html.with-fancybox body.hide-scrollbar {
   -webkit-transform: translate3d(calc(var(--shift, 0) * -1px), 0, 0);
   transform: translate3d(calc(var(--shift, 0) * -1px), 0, 0);
   -webkit-transition: none;
-  -o-transition: none;
   transition: none;
   pointer-events: none;
 }
@@ -2557,14 +2539,12 @@ html.with-fancybox body.hide-scrollbar {
 .is-modern.is-resting .f-thumbs__slide {
   -webkit-transition: -webkit-transform 0.33s ease;
   transition: -webkit-transform 0.33s ease;
-  -o-transition: transform 0.33s ease;
   transition: transform 0.33s ease;
   transition: transform 0.33s ease, -webkit-transform 0.33s ease;
 }
 
 .is-modern.is-resting .f-thumbs__slide__button {
   -webkit-transition: clip-path 0.33s ease;
-  -o-transition: clip-path 0.33s ease;
   transition: clip-path 0.33s ease;
 }
 
@@ -2593,7 +2573,6 @@ html.with-fancybox body.hide-scrollbar {
   touch-action: manipulation;
   opacity: var(--f-thumb-opacity);
   -webkit-transition: opacity 0.2s ease;
-  -o-transition: opacity 0.2s ease;
   transition: opacity 0.2s ease;
 }
 
@@ -2680,7 +2659,6 @@ html.with-fancybox body.hide-scrollbar {
   position: relative;
   opacity: var(--fancybox-opacity, 1);
   -webkit-transition: max-height 0.35s cubic-bezier(0.23, 1, 0.32, 1);
-  -o-transition: max-height 0.35s cubic-bezier(0.23, 1, 0.32, 1);
   transition: max-height 0.35s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
@@ -2692,7 +2670,6 @@ html.with-fancybox body.hide-scrollbar {
 
 .fancybox__thumbs.is-classic .f-spinner {
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.1)), to(rgba(255, 255, 255, 0.05)));
-  background-image: -o-linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
   background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
 }
 
@@ -2706,7 +2683,6 @@ html.with-fancybox body.hide-scrollbar {
 
 .fancybox__thumbs.is-modern .f-spinner {
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.1)), to(rgba(255, 255, 255, 0.05)));
-  background-image: -o-linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
   background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
 }
 
@@ -2731,7 +2707,6 @@ html.with-fancybox body.hide-scrollbar {
 
 .is-closing .fancybox__thumbs {
   -webkit-transition: none !important;
-  -o-transition: none !important;
   transition: none !important;
 }
 
@@ -2926,11 +2901,9 @@ html.with-fancybox body.hide-scrollbar {
   transform-origin: 0;
   -webkit-transition-property: -webkit-transform;
   transition-property: -webkit-transform;
-  -o-transition-property: transform;
   transition-property: transform;
   transition-property: transform, -webkit-transform;
   -webkit-transition-timing-function: linear;
-  -o-transition-timing-function: linear;
   transition-timing-function: linear;
   background: var(--f-progress-color, var(--f-carousel-theme-color, #0091ff));
   z-index: 30;
@@ -3188,7 +3161,6 @@ button,
 .no-transition {
   /* stylelint-disable-next-line */
   -webkit-transition: none !important;
-  -o-transition: none !important;
   transition: none !important;
 }
 
@@ -3279,7 +3251,6 @@ button,
   -ms-user-select: none;
   user-select: none;
   -webkit-transition: opacity 0.3s ease;
-  -o-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
 }
 
@@ -3292,7 +3263,6 @@ button,
   background-color: #ffffff;
   -webkit-transition: opacity 0.3s ease, visibility 0.3s ease, -webkit-transform 0.3s ease;
   transition: opacity 0.3s ease, visibility 0.3s ease, -webkit-transform 0.3s ease;
-  -o-transition: transform 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
   transition: transform 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
   transition: transform 0.3s ease, opacity 0.3s ease, visibility 0.3s ease, -webkit-transform 0.3s ease;
 }
@@ -3341,7 +3311,6 @@ button,
   text-transform: uppercase;
   color: #ffffff;
   -webkit-transition: opacity 0.3s ease;
-  -o-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
@@ -3383,7 +3352,6 @@ button,
   -ms-user-select: none;
   user-select: none;
   -webkit-transition: opacity 0.3s ease;
-  -o-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
   outline: none;
 }
@@ -3404,14 +3372,12 @@ button,
 
 [data-accordion=parent].no-transition [data-accordion=content] {
   -webkit-transition: none;
-  -o-transition: none;
   transition: none;
 }
 
 [data-accordion=content] {
   max-height: 0;
   -webkit-transition: max-height 0.3s;
-  -o-transition: max-height 0.3s;
   transition: max-height 0.3s;
   overflow: hidden;
 }
@@ -3424,7 +3390,6 @@ button,
 [data-tabs=parent].no-transition > [data-tabs=content],
 [data-tabs=parent].no-transition > [data-tabs=element] {
   -webkit-transition: none;
-  -o-transition: none;
   transition: none;
 }
 
@@ -3432,7 +3397,6 @@ button,
 [data-tabs=parent].no-transition-global [data-tabs=content],
 [data-tabs=parent].no-transition-global [data-tabs=element] {
   -webkit-transition: none;
-  -o-transition: none;
   transition: none;
 }
 
@@ -3445,7 +3409,6 @@ button,
   visibility: hidden;
   opacity: 0;
   -webkit-transition: opacity 0.3s ease-in, visibility 0.3s ease-in;
-  -o-transition: opacity 0.3s ease-in, visibility 0.3s ease-in;
   transition: opacity 0.3s ease-in, visibility 0.3s ease-in;
 }
 
@@ -3454,7 +3417,6 @@ button,
   visibility: visible;
   opacity: 1;
   -webkit-transition: none;
-  -o-transition: none;
   transition: none;
 }
 
@@ -3595,7 +3557,6 @@ button,
   opacity: 0;
   -webkit-transition: opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1), visibility 0.6s cubic-bezier(0.55, 0, 0.1, 1), -webkit-transform 0.6s cubic-bezier(0.55, 0, 0.1, 1);
   transition: opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1), visibility 0.6s cubic-bezier(0.55, 0, 0.1, 1), -webkit-transform 0.6s cubic-bezier(0.55, 0, 0.1, 1);
-  -o-transition: opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1), transform 0.6s cubic-bezier(0.55, 0, 0.1, 1), visibility 0.6s cubic-bezier(0.55, 0, 0.1, 1);
   transition: opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1), transform 0.6s cubic-bezier(0.55, 0, 0.1, 1), visibility 0.6s cubic-bezier(0.55, 0, 0.1, 1);
   transition: opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1), transform 0.6s cubic-bezier(0.55, 0, 0.1, 1), visibility 0.6s cubic-bezier(0.55, 0, 0.1, 1), -webkit-transform 0.6s cubic-bezier(0.55, 0, 0.1, 1);
   pointer-events: none;
@@ -3675,13 +3636,11 @@ button,
   height: 32px;
   color: #000000;
   -webkit-transition: color 0.3s ease;
-  -o-transition: color 0.3s ease;
   transition: color 0.3s ease;
 }
 
 .modal--preload {
   -webkit-transition: none;
-  -o-transition: none;
   transition: none;
 }
 
@@ -3693,7 +3652,6 @@ button,
   opacity: 1;
   -webkit-transition: opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1), -webkit-transform 0.6s cubic-bezier(0.55, 0, 0.1, 1);
   transition: opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1), -webkit-transform 0.6s cubic-bezier(0.55, 0, 0.1, 1);
-  -o-transition: opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1), transform 0.6s cubic-bezier(0.55, 0, 0.1, 1);
   transition: opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1), transform 0.6s cubic-bezier(0.55, 0, 0.1, 1);
   transition: opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1), transform 0.6s cubic-bezier(0.55, 0, 0.1, 1), -webkit-transform 0.6s cubic-bezier(0.55, 0, 0.1, 1);
   pointer-events: auto;
@@ -3736,7 +3694,6 @@ button,
   border-radius: 2px;
   background-color: #ffffff;
   -webkit-transition: background-color 0.3s ease;
-  -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
 }
 
@@ -3746,7 +3703,6 @@ button,
   width: 14px;
   height: 14px;
   -webkit-transition: visibility 0.3s ease, opacity 0.3s ease;
-  -o-transition: visibility 0.3s ease, opacity 0.3s ease;
   transition: visibility 0.3s ease, opacity 0.3s ease;
   visibility: hidden;
   opacity: 0;
@@ -3791,7 +3747,6 @@ button,
   line-height: 19px;
   color: rgba(0, 0, 0, 0.5);
   -webkit-transition: opacity 0.3s ease, visibility 0.3s ease;
-  -o-transition: opacity 0.3s ease, visibility 0.3s ease;
   transition: opacity 0.3s ease, visibility 0.3s ease;
   opacity: 0;
   visibility: hidden;
@@ -3894,7 +3849,6 @@ button,
   border-radius: 50%;
   background-color: #ffffff;
   -webkit-transition: border 0.3s ease;
-  -o-transition: border 0.3s ease;
   transition: border 0.3s ease;
 }
 
@@ -3907,7 +3861,6 @@ button,
   height: 10px;
   border-radius: 50%;
   -webkit-transition: visibility 0.3s ease, opacity 0.3s ease;
-  -o-transition: visibility 0.3s ease, opacity 0.3s ease;
   transition: visibility 0.3s ease, opacity 0.3s ease;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
@@ -4002,7 +3955,6 @@ button,
   background-color: #000;
   -webkit-transition: -webkit-transform 0.3s ease;
   transition: -webkit-transform 0.3s ease;
-  -o-transition: transform 0.3s ease;
   transition: transform 0.3s ease;
   transition: transform 0.3s ease, -webkit-transform 0.3s ease;
   clip-path: polygon(100% 0, 100% 20%, 50% 100%, 0 20%, 0 0, 50% 80%);
@@ -4021,7 +3973,6 @@ button,
   list-style: none;
   background-color: lightgrey;
   -webkit-transition: visibility 0.3s ease, opacity 0.3s ease;
-  -o-transition: visibility 0.3s ease, opacity 0.3s ease;
   transition: visibility 0.3s ease, opacity 0.3s ease;
   -webkit-transform: translateY(100%);
   -ms-transform: translateY(100%);
@@ -4037,7 +3988,6 @@ button,
   line-height: 24px;
   color: #000000;
   -webkit-transition: background-color 0.3s ease;
-  -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
   cursor: pointer;
   outline: none;
@@ -4263,7 +4213,6 @@ button,
     background-color: rgba(16, 16, 29, 0.9);
     -webkit-transition: visibility 0.3s ease, opacity 0.3s ease, -webkit-transform 0.3s ease;
     transition: visibility 0.3s ease, opacity 0.3s ease, -webkit-transform 0.3s ease;
-    -o-transition: transform 0.3s ease, visibility 0.3s ease, opacity 0.3s ease;
     transition: transform 0.3s ease, visibility 0.3s ease, opacity 0.3s ease;
     transition: transform 0.3s ease, visibility 0.3s ease, opacity 0.3s ease, -webkit-transform 0.3s ease;
     -webkit-transform: translateX(100%);

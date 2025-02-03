@@ -1,40 +1,40 @@
 // Vendor
 // ---------------------------------
 
-@import "vendor/normalize";
-@import "vendor/swiper/navigation";
-@import "vendor/swiper/pagination";
-@import "vendor/swiper/swiper";
-@import "vendor/fancybox";
+@use "vendor/normalize";
+@use "vendor/swiper/navigation";
+@use "vendor/swiper/pagination";
+@use "vendor/swiper/swiper";
+@use "vendor/fancybox";
 
 // Global
 // ---------------------------------
 
-@import "variables";
-@import "mixins";
-//@import "functions";
-@import "global/fonts";
-@import "global/reboot";
-@import "global/utils";
-@import "global/container";
+@use "variables";
+@use "mixins";
+//@use "functions";
+@use "global/fonts";
+@use "global/reboot";
+@use "global/utils";
+@use "global/container";
 
 // Blocks
 // ---------------------------------
 
-@import "blocks/header";
-@import "blocks/main-nav";
-@import "blocks/footer";
-@import "blocks/btn";
-@import "blocks/data-accordion";
-@import "blocks/data-tabs";
-@import "blocks/intro";
-@import "blocks/accordion";
-@import "blocks/modal";
-@import "blocks/custom-checkbox";
-@import "blocks/custom-input";
-@import "blocks/custom-radio";
-@import "blocks/custom-select";
-@import "blocks/custom-textarea";
+@use "blocks/header";
+@use "blocks/main-nav";
+@use "blocks/footer";
+@use "blocks/btn";
+@use "blocks/data-accordion";
+@use "blocks/data-tabs";
+@use "blocks/intro";
+@use "blocks/accordion";
+@use "blocks/modal";
+@use "blocks/custom-checkbox";
+@use "blocks/custom-input";
+@use "blocks/custom-radio";
+@use "blocks/custom-select";
+@use "blocks/custom-textarea";
 
 // ---------------------------------
 

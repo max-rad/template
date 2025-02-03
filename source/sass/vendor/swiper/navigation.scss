@@ -1,4 +1,4 @@
-@import './swiper-vars.scss';
+@use './swiper-vars';
 @at-root {
   :root {
     --swiper-navigation-size: 20px;
