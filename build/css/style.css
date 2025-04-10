@@ -2590,7 +2590,7 @@ html.with-fancybox body.hide-scrollbar {
 }
 
 .is-modern .f-thumbs__slide__button {
-  --clip-path: inset( 0 calc( ((var(--f-thumb-width, 0) - var(--f-thumb-clip-width, 0))) * (1 - var(--progress, 0)) * 0.5 ) round var(--f-thumb-border-radius, 0) );
+  --clip-path: inset(0 calc(((var(--f-thumb-width, 0) - var(--f-thumb-clip-width, 0))) * (1 - var(--progress, 0)) * 0.5) round var(--f-thumb-border-radius, 0));
   clip-path: var(--clip-path);
 }
 
@@ -3952,7 +3952,7 @@ button,
   width: 20px;
   height: 10px;
   margin-left: 10px;
-  background-color: #000;
+  background-color: #000000;
   -webkit-transition: -webkit-transform 0.3s ease;
   transition: -webkit-transform 0.3s ease;
   transition: transform 0.3s ease;

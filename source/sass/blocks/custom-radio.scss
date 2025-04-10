@@ -1,4 +1,4 @@
-@use "../variables";
+@use "../variables" as *;
 
 .custom-radio {
   label {
@@ -21,9 +21,9 @@
     margin-right: 8px;
 
     border-radius: 50%;
-    background-color: variables.$color-default-white;
+    background-color: $color-default-white;
 
-    transition: border variables.$trans-default;
+    transition: border $trans-default;
 
     &::after {
       content: "";
@@ -37,7 +37,7 @@
 
       border-radius: 50%;
 
-      transition: visibility variables.$trans-default, opacity variables.$trans-default;
+      transition: visibility $trans-default, opacity $trans-default;
       transform: translate(-50%, -50%);
 
       visibility: hidden;

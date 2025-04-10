@@ -1,4 +1,4 @@
-@use './swiper-vars';
+@use './swiper-vars' as *;
 @at-root {
   :root {
   --swiper-pagination-color: #441961;

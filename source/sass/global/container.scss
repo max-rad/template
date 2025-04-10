@@ -1,4 +1,4 @@
-@use "../mixins";
+@use "../mixins" as *;
 
 .container {
   width: 100%;
@@ -6,11 +6,11 @@
   margin: 0 auto;
   padding: 0 40px;
 
-  @include mixins.vp-1023 {
+  @include vp-1023 {
     padding: 0 30px;
   }
 
-  @include mixins.vp-767 {
+  @include vp-767 {
     padding: 0 20px;
   }
 }

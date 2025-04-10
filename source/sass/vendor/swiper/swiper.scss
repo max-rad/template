@@ -10,7 +10,7 @@
  * Released on: September 28, 2023
  */
 
-@use './swiper-vars';
+@use './swiper-vars' as *;
 @at-root {
   @font-face {
     font-family: 'swiper-icons';
@@ -22,7 +22,7 @@
 }
 @at-root {
   :root {
-    --swiper-theme-color: #{swiper-vars.$themeColor};
+    --swiper-theme-color: #{$themeColor};
     /*
     --swiper-preloader-color: var(--swiper-theme-color);
     --swiper-wrapper-transition-timing-function: initial;
@@ -248,6 +248,3 @@
   }
 }
 /* Slide styles end */
-
-
-

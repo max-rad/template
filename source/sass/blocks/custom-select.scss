@@ -1,5 +1,5 @@
-@use "../mixins";
-@use "../variables";
+@use "../mixins" as *;
+@use "../variables" as *;
 
 .custom-select {
   position: relative;
@@ -50,7 +50,7 @@
     font-size: 16px;
     line-height: 24px;
 
-    color: variables.$color-default-black;
+    color: $color-default-black;
   }
 
   &__icon {
@@ -60,11 +60,11 @@
     height: 10px;
     margin-left: 10px;
 
-    background-color: #000;
+    background-color: $color-default-black;
 
-    transition: transform variables.$trans-default;
+    transition: transform $trans-default;
 
-    clip-path: polygon(100% 0,100% 20%,50% 100%,0 20%,0 0,50% 80%);
+    clip-path: polygon(100% 0, 100% 20%, 50% 100%, 0 20%, 0 0, 50% 80%);
   }
 
   &__list {
@@ -83,7 +83,7 @@
 
     background-color: lightgrey;
 
-    transition: visibility variables.$trans-default, opacity variables.$trans-default;
+    transition: visibility $trans-default, opacity $trans-default;
     transform: translateY(100%);
 
     visibility: hidden;
@@ -97,14 +97,14 @@
     font-size: 16px;
     line-height: 24px;
 
-    color: variables.$color-default-black;
+    color: $color-default-black;
 
-    transition: background-color variables.$trans-default;
+    transition: background-color $trans-default;
 
     cursor: pointer;
     outline: none;
 
-    @include mixins.hover-focus {
+    @include hover-focus {
       background-color: chartreuse;
     }
   }

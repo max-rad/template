@@ -1,5 +1,5 @@
-@use "../mixins";
-@use "../variables";
+@use "../mixins" as *;
+@use "../variables" as *;
 
 .btn {
   display: inline-flex;
@@ -13,25 +13,25 @@
   line-height: 16px;
   text-transform: uppercase;
 
-  border: 1px solid variables.$color-default-white;
+  border: 1px solid $color-default-white;
   border-radius: 4px;
-  background-color: variables.$color-summer-sky-2;
-  color: variables.$color-default-white;
+  background-color: $color-summer-sky-2;
+  color: $color-default-white;
 
   cursor: pointer;
   user-select: none;
 
-  transition: opacity variables.$trans-default;
+  transition: opacity $trans-default;
 
   outline: none;
 
   &--white {
-    border: 1px solid variables.$color-dolphin;
-    background-color: variables.$color-default-white;
-    color: variables.$color-black-russian-2;
+    border: 1px solid $color-dolphin;
+    background-color: $color-default-white;
+    color: $color-black-russian-2;
   }
 
-  @include mixins.hover-focus {
+  @include hover-focus {
     opacity: 0.8;
   }
 }

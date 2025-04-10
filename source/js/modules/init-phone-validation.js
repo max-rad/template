@@ -24,6 +24,6 @@ const initPhoneValidation = () => {
       });
     }
   });
-}
+};
 
 export {initPhoneValidation};

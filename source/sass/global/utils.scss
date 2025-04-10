@@ -1,4 +1,4 @@
-@use "../variables";
+@use "../variables" as *;
 
 .wrapper {
   position: relative;
@@ -46,7 +46,7 @@
 .btn-reset {
   padding: 0;
   border: none;
-  background-color: variables.$color-transparent;
+  background-color: $color-transparent;
 }
 
 .scroll-lock-ios {

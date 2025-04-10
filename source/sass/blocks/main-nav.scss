@@ -1,5 +1,5 @@
-@use "../mixins";
-@use "../variables";
+@use "../mixins" as *;
+@use "../variables" as *;
 
 .main-nav {
   &__toggle {
@@ -13,9 +13,9 @@
     cursor: pointer;
     user-select: none;
 
-    transition: opacity variables.$trans-default;
+    transition: opacity $trans-default;
 
-    @include mixins.vp-767 {
+    @include vp-767 {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -30,9 +30,9 @@
       width: 100%;
       height: 3px;
 
-      background-color: variables.$color-default-white;
+      background-color: $color-default-white;
 
-      transition: transform variables.$trans-default, opacity variables.$trans-default, visibility variables.$trans-default;
+      transition: transform $trans-default, opacity $trans-default, visibility $trans-default;
 
       &:nth-child(1) {
         top: 0;
@@ -49,7 +49,7 @@
       }
     }
 
-    @include mixins.hover-focus {
+    @include hover-focus {
       opacity: 0.8;
     }
   }
@@ -62,7 +62,7 @@
 
     list-style: none;
 
-    @include mixins.vp-767 {
+    @include vp-767 {
       z-index: 10;
       position: fixed;
       flex-direction: column;
@@ -76,9 +76,9 @@
       width: 100%;
       padding: 200px 20px 20px;
 
-      background-color: rgba(variables.$color-black-russian, 0.9);
+      background-color: rgba($color-black-russian, 0.9);
 
-      transition: transform variables.$trans-default, visibility variables.$trans-default, opacity variables.$trans-default;
+      transition: transform $trans-default, visibility $trans-default, opacity $trans-default;
       transform: translateX(100%);
     }
   }
@@ -86,11 +86,11 @@
   &__item {
     margin-right: 60px;
 
-    @include mixins.vp-1023 {
+    @include vp-1023 {
       margin-right: 30px;
     }
 
-    @include mixins.vp-767 {
+    @include vp-767 {
       margin-right: 0;
       margin-bottom: 30px;
     }
@@ -98,7 +98,7 @@
     &:last-child {
       margin-right: 0;
 
-      @include mixins.vp-767 {
+      @include vp-767 {
         margin-bottom: 0;
       }
     }
@@ -112,18 +112,18 @@
     line-height: 16px;
     text-transform: uppercase;
 
-    color: variables.$color-default-white;
+    color: $color-default-white;
 
-    transition: opacity variables.$trans-default;
+    transition: opacity $trans-default;
     transform: translate3d(0, 0, 0);
 
     &.is-active {
-      color: variables.$color-summer-sky;
+      color: $color-summer-sky;
 
       pointer-events: none;
     }
 
-    @include mixins.hover-focus {
+    @include hover-focus {
       opacity: 0.8;
     }
   }
